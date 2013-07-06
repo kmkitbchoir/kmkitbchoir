@@ -9,11 +9,11 @@
 		$db_pass = "5409333";
 		$db_home = "";
 	}else{
-		$db_user = "u195076330_rio";
-		$db_db = "u195076330_kmk";
-		$db_host = "mysql.your3host.com";
-		$db_pass = "kmkchoir2013";
-		$db_home = "http://www.kmkchoir.3area.info";
+		$db_user = "u853683177_kmk";
+		$db_db = "u853683177_kmk";
+		$db_host = "mysql.idhostinger.com";
+		$db_pass = "kmkitbchoir";
+		$db_home = "http://www.kmkitbchoir.vv.si";
 	}
 	
 ?>

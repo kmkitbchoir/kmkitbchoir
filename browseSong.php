@@ -4,21 +4,26 @@
  	$op1 = mysqli_connect($db_host, $db_user, $db_pass);
 	mysqli_select_db($op1, $db_db);
 	
-	$sq1 = "SELECT title,composer,arr,loc,id FROM songs";
+	$sq1 = "SELECT title,composer,arr,loc,id FROM songs ORDER BY title";
 	$re1 = mysqli_query($op1,$sq1);
 	echo mysqli_error($op1);
-	
-	echo "<table border='1'>";
-	echo "<thead>";
-	echo "<tr>";
-	echo "<td>Title</td>";
-	echo "<td>Composer</td>";
-	echo "<td>Arranger</td>";
-	echo "<td>View Online</td>";
-	echo "<td>Download File</td>";
-	echo "</tr>";
-	echo "</thead>";
-	echo "<tbody>";
+?>
+	<link rel="stylesheet" media="screen" href="css/browseSong.css"/>
+	<div class="row">
+		<div class="centered twelve columns" align="center">
+			<table border='1'>
+				<thead>
+					<tr>
+						<td>Title</td>
+						<td>Composer</td>
+						<td>Arranger</td>
+						<td>View Online</td>
+						<td>Download File</td>
+					</tr>
+				</thead>
+				<tbody>
+		
+<?php
 	while($v = mysqli_fetch_array($re1)){
 		$title = $v[0];
 		$composer = $v[1];
@@ -29,10 +34,16 @@
 		echo "<td>".$title."</td>";
 		echo "<td>".$composer."</td>";
 		echo "<td>".$arranger."</td>";
-		echo "<td><a href='viewSong.php?id=".$id."'>View</a></td>";
-		echo "<td><a href='".$location."'>Download</a></td>";
+		echo "<td class='view'><a href='viewSong.php?id=".$id."'><i class='icon-eye'></i>View</a></td>";
+		echo "<td class='download'><a href='".$location."'><i class='icon-download'></i>Download</a></td>";
 		echo "</tr>";			
-	}  
-	echo "</tbody>";
-	echo "</table>";
+	}
+?> 
+			</tbody>
+			</table>
+		</div>
+	</div>
+	<br/>
+<?php
+	include_once 'footer.php';
 ?>

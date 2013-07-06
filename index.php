@@ -1,4 +1,12 @@
 <?php
     include_once 'header.php';
-    echo "This is KMK CHOIR home page :)"
+?>
+
+<div class="row">
+	<h4>Under Construction</h4>
+	This is KMK CHOIR home page :)<br/>
+</div>
+
+<?php
+    include_once 'footer.php';
 ?>

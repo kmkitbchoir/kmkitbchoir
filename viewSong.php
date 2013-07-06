@@ -13,10 +13,12 @@
 	
 	if($location != ''){
 		echo "
-			<a class='media' href='$location'></a>
-			<script type='text/javascript' src='js/jQuery.js'></script>
-			<script type='text/javascript' src='js/media.js'></script>
-			<script type='text/javascript' src='js/viewSong.js'></script>
+			<div id ='viewPDF' align='center' src='$location' base='$db_home'>
+				<script type='text/javascript' src='js/jQuery.js'></script>
+				<script type='text/javascript' src='js/viewSong.js'></script>
+			</div>
 		";
 	}
+	echo "<br/>";
+	include_once("footer.php");
 ?>

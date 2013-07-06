@@ -1,0 +1,13 @@
+/*Editing navigation bar hover*/
+.row.navbar > ul > li > a:hover{
+	color: #ff8040;
+	background-color: #36383A;	
+}
+
+/*Footer*/
+#footer{
+	color: white;
+	font-size: 11px;
+	font-style: italic;
+	background-color: #4a4d50;
+}
