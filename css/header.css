@@ -1,7 +1,13 @@
 /*Editing navigation bar hover*/
 .row.navbar > ul > li > a:hover{
 	color: #ff8040;
-	background-color: #36383A;	
+	background-color: #36383A;
+	transition-duration: 0.3s;	
+}
+
+/*Header*/
+#site_title{
+	vertical-align: bottom;
 }
 
 /*Footer*/

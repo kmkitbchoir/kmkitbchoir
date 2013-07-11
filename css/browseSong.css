@@ -39,3 +39,11 @@ td.download  > a{
 td.download  > a:hover{
 	color: #5b9ede;
 }
+
+td.edit  > a{
+	color: #f6b83f;
+}
+
+td.edit > a:hover{
+	color: #f8ca70;
+}
