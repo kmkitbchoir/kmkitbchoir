@@ -1,12 +1,12 @@
 <?php
 	include_once("header.php");
 	include_once("config.php");
- 	$op1 = mysqli_connect($db_host, $db_user, $db_pass);
-	mysqli_select_db($op1, $db_db);
+	checkAuth(basename(__FILE__));
+	$sq1 = $op->prepare("SELECT title,composer,arr,loc,id FROM songs ORDER BY title");
+	$sq1->execute();
+	echo $sq1->error;
+	$re1 = $sq1->get_result();
 	
-	$sq1 = "SELECT title,composer,arr,loc,id FROM songs ORDER BY title";
-	$re1 = mysqli_query($op1,$sq1);
-	echo mysqli_error($op1);
 ?>
 	<link rel="stylesheet" media="screen" href="css/browseSong.css"/>
 	<div class="row">
@@ -32,12 +32,12 @@
 				<tbody>
 		
 <?php
-	while($v = mysqli_fetch_array($re1)){
-		$title = $v[0];
-		$composer = $v[1];
-		$arranger = $v[2];
-		$location = $v[3];
-		$id = $v[4];
+	while($v = $re1->fetch_assoc()){
+		$title = $v['title'];
+		$composer = $v['composer'];
+		$arranger = $v['arr'];
+		$location = $v['loc'];
+		$id = $v['id'];
 		echo "<tr>";
 		echo "<td>".$title."</td>";
 		echo "<td>".$composer."</td>";

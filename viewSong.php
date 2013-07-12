@@ -1,15 +1,14 @@
 <?php
 	include_once("header.php");
     include_once("config.php");
-	$op1 = mysqli_connect($db_host, $db_user, $db_pass);
-	mysqli_select_db($op1, $db_db);
 	
 	$id = $_GET["id"];
-	$sq1 = "SELECT loc FROM songs WHERE id='$id'";
-	$re1 = mysqli_query($op1,$sq1);
-	print mysqli_error($op1);
-	$v = mysqli_fetch_array($re1);
-	$location = $v[0];
+	$sq1 = $op->prepare("SELECT loc FROM songs WHERE id=?");
+	$sq1->bind_param('i',$id);
+	$sq1->execute();
+	$re1 = $sq1->get_result();
+	$v = $re1->fetch_assoc();
+	$location = $v['loc'];
 	
 	if($location != ''){
 		echo "
