@@ -17,6 +17,7 @@
 	}
 	
 	$op = new mysqli($db_host,$db_user,$db_pass,$db_db);
+	
 	if(mysqli_connect_errno()){
 		echo "Connect failed <br/>";
 		echo mysqli_connect_error();

@@ -1,7 +1,7 @@
 <?php
 	include_once("header.php");
 	include_once("config.php");
-	checkAuth(basename(__FILE__));
+	
 	$sq1 = $op->prepare("SELECT title,composer,arr,loc,id FROM songs ORDER BY title");
 	$sq1->execute();
 	echo $sq1->error;
