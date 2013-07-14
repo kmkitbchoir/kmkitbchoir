@@ -1,6 +1,7 @@
 <?php
 	include_once("header.php");
 ?>
+<link rel="stylesheet" href="css/login.css" media="screen"/>
 <form method="POST" action="loginAuth.php">
 	<div class="row">
 		<div class="centered six columns" align="center">
@@ -9,21 +10,23 @@
 					<td>
 						Username
 					</td>
-					<td>
-						<input type="text" id="username" name="username"/>
+					<td class="field">
+						<input type="text" class="text input" id="username" name="username"/>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Password
 					</td>
-					<td>
-						<input type="password" id="password" name="password"/>
+					<td class="field">
+						<input type="password" class="password input" id="password" name="password"/>
 					</td>
 				</tr>
 				<tr>
 					<td colspan='2'>
-						<input type="submit"/>
+						<div class="medium primary btn" align="center">
+							<input type="submit"/>
+						</div>
 					</td>
 				</tr>
 			</table>

@@ -10,9 +10,14 @@
 ?>
 	<link rel="stylesheet" media="screen" href="css/browseSong.css"/>
 	<div class="row">
+		<div class="centered twelve columns field" align="center">
+			<div class="field">
+				<input type="text" class="search input" id="searchSongs" placeholder="Search your songs by typing here..."/>
+			</div>
+		</div>
 		<div class="centered twelve columns" align="center">
 			<table border='1'>
-				<thead>
+				<thead id="songHeader">
 					<tr>
 						<td>Title</td>
 						<td>Composer</td>
@@ -29,7 +34,7 @@
 						?>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="songContent">
 		
 <?php
 	while($v = $re1->fetch_assoc()){
@@ -61,3 +66,4 @@
 <?php
 	include_once 'footer.php';
 ?>
+<script src="js/browseSong.js"></script>
