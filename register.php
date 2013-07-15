@@ -2,9 +2,10 @@
 	<?php
 		include_once 'header.php';
 	?>
+	<link rel="stylesheet" media="screen" href="css/register.css"/>
 	
 	<body>
-		<form id="f_upload" method="POST" action="fileManagement.php" enctype="multipart/form-data">
+		<form id="f_reg" method="POST" action="regAuth.php">
 			<div class="row">	
 				<div class="centered six columns" align="center">
 					<div class="field">

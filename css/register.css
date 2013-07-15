@@ -1,0 +1,7 @@
+.btn.primary{
+	border: transparent;
+}
+
+#submit[disabled]{
+	background-color: #dddddd;
+}

@@ -35,5 +35,5 @@ function setTable(json){
 		}
 		res += "</tr>";
 	}
-	$("#songContent").html(res);	
+	$("#songContent").html(res);
 }
