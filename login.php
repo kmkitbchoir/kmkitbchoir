@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="css/login.css" media="screen"/>
 <form method="POST" action="loginAuth.php">
 	<div class="row">
-		<div class="centered six columns" align="center">
+		<div class="centered six columns" align="center" id="container">
 			<table>
 				<tr>
 					<td>
@@ -36,3 +36,4 @@
 <?php
 	include_once("footer.php");
 ?>
+<script src="js/login.js" type="text/javascript"></script>
