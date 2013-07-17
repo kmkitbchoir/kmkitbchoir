@@ -1,0 +1,25 @@
+/*edit thead*/
+thead > tr > td{
+	font-weight: bold;
+	background-color: #b5b4b4;
+}
+
+/*edit tbody*/
+tbody > tr:nth-child(even){
+	background-color: #e4e2e2;
+}
+
+tbody > tr:nth-child(even):hover{
+	background-color: #ffa579;
+}
+
+/*edit tr*/
+tbody > tr:hover{
+	background-color: #ffa579;
+}
+
+/*edit td*/
+td{
+	padding-left: 6px;
+	padding-right: 6px;
+}
