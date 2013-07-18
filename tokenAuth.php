@@ -12,6 +12,7 @@
 	$sq1->execute();
 	$sq1->bind_result($v['1']);
 	$sq1->fetch();
+	$sq1->close();
 	if($v['1'] == '1'){
 		$sq1 = $op->prepare("UPDATE temp_user SET status = '1' WHERE token = ?");
 		$sq1->bind_param('s',$token);
