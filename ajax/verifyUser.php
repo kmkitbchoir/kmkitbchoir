@@ -7,8 +7,8 @@
 		$sq1 = $op->prepare("SELECT user,pass,fname,lname FROM temp_user WHERE email=?");
 		$sq1->bind_param("s",$email);
 		$sq1->execute();
-		$re1 = $sq1->get_result();
-		$v = $re1->fetch_assoc();
+		$sq1->bind_result($v['user'],$v['pass'],$v['fname'],$v['lname']);
+		$sq1->fetch();
 		
 		if($v['user'] != null){
 			include_once ("../lib/PHPMailer/class.phpmailer.php");

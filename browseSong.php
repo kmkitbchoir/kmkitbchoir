@@ -2,10 +2,10 @@
 	include_once("header.php");
 	include_once("config.php");
 	
-	$sq1 = $op->prepare("SELECT title,composer,arr,loc,id FROM songs ORDER BY title");
+	$sq1 = $op->prepare("SELECT title,composer,arr,loc,id FROM songs ORDER BY title LIMIT 20");
 	$sq1->execute();
 	echo $sq1->error;
-	$re1 = $sq1->get_result();
+	$sq1->bind_result($v['title'],$v['composer'],$v['arr'],$v['loc'],$v['id']);
 	
 ?>
 	<link rel="stylesheet" media="screen" href="css/browseSong.css"/>
@@ -37,7 +37,7 @@
 				<tbody id="songContent">
 		
 <?php
-	while($v = $re1->fetch_assoc()){
+	while($sq1->fetch()){
 		$title = $v['title'];
 		$composer = $v['composer'];
 		$arranger = $v['arr'];

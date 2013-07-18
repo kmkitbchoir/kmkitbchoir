@@ -19,8 +19,8 @@
 		echo "<tbody>";
 		$sq1 = $op->prepare("SELECT user, fname, lname, email FROM temp_user WHERE status='1'");
 		$sq1->execute();
-		$re1 = $sq1->get_result();
-		while($v = $re1->fetch_assoc()){
+		$sq1->bind_result($v['user'],$v['fname'],$v['lname'],$v['email']);
+		while($sq1->fetch()){
 			echo "<tr>";
 			echo "<td>".$v['user']."</td>";
 			echo "<td>".$v['fname']."</td>";

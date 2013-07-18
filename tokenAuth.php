@@ -10,8 +10,8 @@
 	$sq1 = $op->prepare("SELECT 1 FROM temp_user WHERE token=? AND status = '0'");
 	$sq1->bind_param('s',$token);
 	$sq1->execute();
-	$re1 = $sq1->get_result();
-	$v = $re1->fetch_assoc();
+	$sq1->bind_result($v['1']);
+	$sq1->fetch();
 	if($v['1'] == '1'){
 		$sq1 = $op->prepare("UPDATE temp_user SET status = '1' WHERE token = ?");
 		$sq1->bind_param('s',$token);

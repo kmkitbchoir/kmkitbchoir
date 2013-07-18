@@ -10,14 +10,14 @@
 	
 	$sq1->execute();
 	echo $sq1->error;
-	$re1 = $sq1->get_result();
+	$sq1->bind_result($v['title'],$v['composer'],$v['arr'],$v['loc'],$v['id']);
 	
 	$title = array();
 	$composer = array();
 	$arr = array();
 	$loc = array();
 	$id = array();
-	while($v = $re1->fetch_assoc()){
+	while($sq1->fetch()){
 		array_push($title,$v['title']);
 		array_push($composer,$v['composer']);
 		array_push($arr,$v['arr']);

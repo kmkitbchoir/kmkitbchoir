@@ -2,11 +2,11 @@
 
 	global $op;
 	
-	$db_user = "u853683177_kmk";
-	$db_db = "u853683177_kmk";
+	$db_user = "u547639049_kmk";
+	$db_db = "u547639049_kmk";
 	$db_host = "mysql.idhostinger.com";
 	$db_pass = "kmkitbchoir";
-	$db_home = "http://www.kmkitbchoir.vv.si";
+	$db_home = "http://www.kmkitbchoir.org";
 	
 	if($_SERVER["SERVER_NAME"]=="localhost"){
 	    $db_user = "rio";

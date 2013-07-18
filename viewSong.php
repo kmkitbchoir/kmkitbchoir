@@ -6,8 +6,8 @@
 	$sq1 = $op->prepare("SELECT loc FROM songs WHERE id=?");
 	$sq1->bind_param('i',$id);
 	$sq1->execute();
-	$re1 = $sq1->get_result();
-	$v = $re1->fetch_assoc();
+	$sq1->bind_result($v['loc']);
+	$sq1->fetch();
 	$location = $v['loc'];
 	
 	if($location != ''){
