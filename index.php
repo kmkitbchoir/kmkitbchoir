@@ -3,8 +3,17 @@
 ?>
 
 <div class="row">
-	<h4>Under Construction</h4>
-	This is KMK CHOIR home page :)<br/>
+	<h4><strong>Welcome to KMK CHOIR home page!</strong></h4>
+	<br/>
+	<div class="seven columns">
+		<img src="img/front_image.jpg" alt="Front">
+	</div>
+	<ul class="four columns">
+		<li><img src="#" alt=""></li>
+		<li><img src="#" alt=""></li>
+		<li><img src="#" alt=""></li>
+		<li><img src="#" alt=""></li>
+	</ul>
 </div>
 
 <?php
