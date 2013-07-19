@@ -20,6 +20,10 @@
 						<label for='password'>Password</label>
 						<input type='password' class='password input' id='password' name='password' placeholder='Password' size='40' maxlength='40'/>
 					</div>
+					<div class='field'>		
+						<label for='password'>Confirm Password</label>
+						<input type='password' class='password input' id='cpassword' placeholder='Confirm Password' size='40' maxlength='40'/>
+					</div>
 					<div class='field'>	
 						<label for='firstname'>First Name</label>
 						<input type='text' class='text input' id='firstname' name='firstname' placeholder='First Name' size='40' maxlength='40'/>

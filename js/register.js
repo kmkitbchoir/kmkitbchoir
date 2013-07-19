@@ -1,7 +1,7 @@
 /**
  * @author Nicholas Rio
  */
-var userValid, emailValid, passwordValid, firstnameValid, lastnameValid = false;
+var userValid, emailValid, passwordValid, firstnameValid, lastnameValid, confirmValid = false;
 
 $("#user").change(function(){
 	$.get("ajax/checkUser.php?u="+$("#user").val(),function(data, status){
@@ -49,6 +49,7 @@ $("#email").change(function(){
 });
 
 $("#password").change(function(){
+	convirmValid = false;
 	if($("#password").val().length < 8){
 		$("#passwordAlert").remove();
 		$("#password").parent().removeClass("success");
@@ -96,8 +97,21 @@ $("#lastname").change(function(){
 	validate();
 });
 
+$("#cpassword").change(function(){
+	if($("#password").val() == $("#cpassword").val()){
+		$("#cpassword").parent().removeClass("danger");
+		$("#cpassword").parent().addClass("success");
+		confirmValid = true;
+	}else{
+		$("#cpassword").parent().removeClass("success");
+		$("#cpassword").parent().addClass("danger");
+		confirmValid = false;
+	}
+	validate();
+});
+
 function validate(){
-	if (userValid && emailValid && passwordValid && firstnameValid && lastnameValid){
+	if (userValid && emailValid && passwordValid && firstnameValid && lastnameValid && confirmValid){
 		$("#submit").removeAttr("disabled");
 		return true;
 	}else{

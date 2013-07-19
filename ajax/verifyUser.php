@@ -9,6 +9,7 @@
 		$sq1->execute();
 		$sq1->bind_result($v['user'],$v['pass'],$v['fname'],$v['lname']);
 		$sq1->fetch();
+		$sq1->close();
 		
 		if($v['user'] != null){
 			include_once ("../lib/PHPMailer/class.phpmailer.php");
